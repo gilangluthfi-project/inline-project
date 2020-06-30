@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:myproject/screens/queue/liked_queue.dart';
 import 'package:myproject/screens/queue/recent_queue.dart';
 import 'package:myproject/screens/queue/top_queue.dart';
+import 'package:myproject/screens/search/search.dart';
 import 'package:myproject/tools/color_constant.dart';
 import 'package:myproject/widgets/buttons.dart';
 import 'package:myproject/widgets/cards.dart';
@@ -104,7 +105,10 @@ class _HomeBodyState extends State<HomeBody> {
                           color: Colors.transparent,
                           child: InkWell(
                             onTap: () {
-                              print("Search");
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Search()));
                             },
                             borderRadius: BorderRadius.circular(10),
                             splashColor: Colors.deepOrange[600],
